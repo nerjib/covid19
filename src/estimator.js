@@ -1,9 +1,32 @@
 /* eslint-disable linebreak-style */
 const covid19ImpactEstimator = (data) => {
-  const currentInfected = data.reportedCases * 10;
-  const expectedCases = currentInfected * 1024;
-  const severeInfected = data.reportedCases * 50;
-  const expectedSevereCases = severeInfected * 1024;
+  let currentInfected;
+  let expectedCases;
+  let severeInfected;
+  let expectedSevereCases;
+  switch (data.periodType) {
+    case 'days':
+      currentInfected = data.reportedCases * 10;
+      expectedCases = currentInfected * 1024;
+      severeInfected = data.reportedCases * 50;
+      expectedSevereCases = severeInfected * 1024;
+      break;
+    case 'weeks':
+      currentInfected = data.reportedCases * 10;
+      expectedCases = Math.round(currentInfected * (2 ** ((7 * data.timeToElapse) / 3)));
+      severeInfected = data.reportedCases * 50;
+      expectedSevereCases = Math.round(severeInfected * (2 ** ((7 * data.timeToElapse) / 3)));
+      break;
+    case 'months':
+      currentInfected = data.reportedCases * 10;
+      expectedCases = Math.round(currentInfected * (2 ** ((7 * 4 * data.timeToElapse) / 3)));
+      severeInfected = data.reportedCases * 50;
+      expectedSevereCases = Math.round(severeInfected * (2 ** ((7 * 4 * data.timeToElapse) / 3)));
+      break;
+    default:
+      currentInfected = 0;
+  }
+
   return {
     data,
     impact: {
