@@ -8,7 +8,6 @@
     "lint": "eslint ./src/",
     "test": "jest"
   },
-  "type":"module",
   "dependencies": {
     "jasmine": "^3.5.0",
     "on-covid-19": "^0.1.3"
