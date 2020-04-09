@@ -25,6 +25,7 @@ const covid19ImpactEstimator = (data) => {
       break;
     default:
       currentInfected = 0;
+      expectedCases = 0;
   }
 
   return {
