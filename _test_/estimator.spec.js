@@ -24,11 +24,11 @@ describe('Challenge 1', () => {
       data: input,
       impact: {
         currentlyInfected: 6740,
-        infectionsByRequestedTime: 4452184425
+        infectionsByRequestedTime: 6901760
       },
       severeImpact: {
         currentlyInfected: 33700,
-        infectionsByRequestedTime: 22260922126          
+        infectionsByRequestedTime: 34508800         
       }
     };
 
@@ -56,11 +56,11 @@ describe('Challenge 1', () => {
       data: input,
       impact: {
         currentlyInfected: 6740,
-        infectionsByRequestedTime: 171185
+        infectionsByRequestedTime: 215680
       },
       severeImpact: {
         currentlyInfected: 33700,
-        infectionsByRequestedTime: 855927           
+        infectionsByRequestedTime: 842500           
       }
     };
   
@@ -80,8 +80,8 @@ describe('Challenge 1', () => {
       periodType: 'months',
       timeToElapse: 1,
       reportedCases: 674,
-      population: 66622705,
-      totalHospitalBeds: 1380614
+      population: 6901760,
+      totalHospitalBeds: 34508800
     };
     
     const output = {
