@@ -23,12 +23,16 @@ describe('Challenge 1', () => {
     const output = {
       data: input,
       impact: {
-        currentlyInfected: 6740,
-        infectionsByRequestedTime: 6901760
+        currentlyInfected: 6740,  
+        infectionsByRequestedTime: 6901760,
+        severeCasesByRequestedTime: 1035264,
+        hospitalBedsByRequestedTime: -552050
       },
       severeImpact: {
         currentlyInfected: 33700,
-        infectionsByRequestedTime: 34508800         
+        infectionsByRequestedTime: 34508800,
+        severeCasesByRequestedTime: 5176320,
+        hospitalBedsByRequestedTime: -4693106         
       }
     };
 
@@ -56,11 +60,18 @@ describe('Challenge 1', () => {
       data: input,
       impact: {
         currentlyInfected: 6740,
-        infectionsByRequestedTime: 215680
+        //  infectionsByRequestedTime: 215680,
+        infectionsByRequestedTime: 107840,
+        severeCasesByRequestedTime: 16176,
+        hospitalBedsByRequestedTime: 467038
       },
       severeImpact: {
         currentlyInfected: 33700,
-        infectionsByRequestedTime: 842500           
+        // infectionsByRequestedTime: 842500
+        infectionsByRequestedTime: 539200,
+        severeCasesByRequestedTime: 80880,
+        hospitalBedsByRequestedTime: 402334
+           
       }
     };
   
@@ -88,11 +99,15 @@ describe('Challenge 1', () => {
       data: input,
       impact: {
         currentlyInfected: 6740,
-        infectionsByRequestedTime: 4347836
+        infectionsByRequestedTime: 6901760,
+        severeCasesByRequestedTime: 1035264,
+        hospitalBedsByRequestedTime: 11042816
       },
       severeImpact: {
         currentlyInfected: 33700,
-        infectionsByRequestedTime: 21739182          
+        infectionsByRequestedTime: 34508800,
+        severeCasesByRequestedTime: 5176320,
+        hospitalBedsByRequestedTime: 6901760         
       }
     };
     
