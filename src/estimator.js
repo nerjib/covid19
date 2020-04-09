@@ -38,16 +38,16 @@ const covid19ImpactEstimator = (data) => {
       expectedCases = (currentInfected * (2 ** Math.trunc((7 * data.timeToElapse) / 3)));
       severeCaseEstimate = Math.trunc((15 / 100) * expectedCases);
       hospitalBedByTime = Math.ceil((35 / 100) * data.totalHospitalBeds) - severeCaseEstimate;
-      icuRequire = Math.trunc((5 / 100) * expectedCases);
-      ventRequire = Math.trunc((2 / 100) * expectedCases);
+      icuRequire = Math.trunc((5 / 100) * severeCaseEstimate);
+      ventRequire = Math.trunc((2 / 100) * severeCaseEstimate);
       dollarloss = expectedCases * data.region.avgDailyIncomeInUSD
       * data.region.avgDailyIncomePopulation * (data.timeToElapse * 7);
       severeInfected = data.reportedCases * 50;
       expectedSevereCases = (severeInfected * (2 ** Math.trunc((7 * data.timeToElapse) / 3)));
       severeCasesByTime = Math.trunc((15 / 100) * expectedSevereCases);
       severeHospitalBed = Math.ceil((35 / 100) * data.totalHospitalBeds) - severeCasesByTime;
-      severeICURequire = Math.trunc((5 / 100) * expectedSevereCases);
-      severeVentRequire = Math.trunc((2 / 100) * expectedSevereCases);
+      severeICURequire = Math.trunc((5 / 100) * severeCasesByTime);
+      severeVentRequire = Math.trunc((2 / 100) * severeCasesByTime);
       severeDollarloss = expectedSevereCases * data.region.avgDailyIncomeInUSD
       * data.region.avgDailyIncomePopulation * (data.timeToElapse * 7);
       break;
