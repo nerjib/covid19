@@ -11,35 +11,35 @@ const covid19ImpactEstimator = (data) => {
   switch (data.periodType) {
     case 'days':
       currentInfected = data.reportedCases * 10;
-      expectedCases = (currentInfected * (2 ** Math.floor(data.timeToElapse / 3)));
-      severeCaseEstimate = Math.floor((15 / 100) * expectedCases);
-      hospitalBedByTime = Math.floor((35 / 100) * data.totalHospitalBeds) - severeCaseEstimate;
+      expectedCases = (currentInfected * (2 ** Math.trunc(data.timeToElapse / 3)));
+      severeCaseEstimate = Math.trunc((15 / 100) * expectedCases);
+      hospitalBedByTime = Math.trunc((35 / 100) * data.totalHospitalBeds) - severeCaseEstimate;
       severeInfected = data.reportedCases * 50;
-      expectedSevereCases = (severeInfected * (2 ** Math.floor(data.timeToElapse / 3)));
-      severeCasesByTime = Math.floor((15 / 100) * expectedSevereCases);
-      severeHospitalBed = Math.floor((35 / 100) * data.totalHospitalBeds) - severeCasesByTime;
+      expectedSevereCases = (severeInfected * (2 ** Math.trunc(data.timeToElapse / 3)));
+      severeCasesByTime = Math.trunc((15 / 100) * expectedSevereCases);
+      severeHospitalBed = Math.trunc((35 / 100) * data.totalHospitalBeds) - severeCasesByTime;
 
       break;
     case 'weeks':
       currentInfected = data.reportedCases * 10;
-      expectedCases = (currentInfected * (2 ** Math.floor((7 * data.timeToElapse) / 3)));
-      severeCaseEstimate = Math.floor((15 / 100) * expectedCases);
-      hospitalBedByTime = Math.floor((35 / 100) * data.totalHospitalBeds) - severeCaseEstimate;
+      expectedCases = (currentInfected * (2 ** Math.trunc((7 * data.timeToElapse) / 3)));
+      severeCaseEstimate = Math.trunc((15 / 100) * expectedCases);
+      hospitalBedByTime = Math.trunc((35 / 100) * data.totalHospitalBeds) - severeCaseEstimate;
       severeInfected = data.reportedCases * 50;
-      expectedSevereCases = (severeInfected * (2 ** Math.floor((7 * data.timeToElapse) / 3)));
-      severeCasesByTime = Math.floor((15 / 100) * expectedSevereCases);
-      severeHospitalBed = Math.floor((35 / 100) * data.totalHospitalBeds) - severeCasesByTime;
+      expectedSevereCases = (severeInfected * (2 ** Math.trunc((7 * data.timeToElapse) / 3)));
+      severeCasesByTime = Math.trunc((15 / 100) * expectedSevereCases);
+      severeHospitalBed = Math.trunc((35 / 100) * data.totalHospitalBeds) - severeCasesByTime;
 
       break;
     case 'months':
       currentInfected = data.reportedCases * 10;
-      expectedCases = (currentInfected * (2 ** Math.floor((30 * data.timeToElapse) / 3)));
-      severeCaseEstimate = Math.floor((15 / 100) * expectedCases);
-      hospitalBedByTime = Math.floor((35 / 100) * data.totalHospitalBeds) - severeCaseEstimate;
+      expectedCases = (currentInfected * (2 ** Math.trunc((30 * data.timeToElapse) / 3)));
+      severeCaseEstimate = Math.trunc((15 / 100) * expectedCases);
+      hospitalBedByTime = Math.trunc((35 / 100) * data.totalHospitalBeds) - severeCaseEstimate;
       severeInfected = data.reportedCases * 50;
-      expectedSevereCases = Math.floor(severeInfected * (2 ** ((30 * data.timeToElapse) / 3)));
-      severeCasesByTime = Math.floor((15 / 100) * expectedSevereCases);
-      severeHospitalBed = Math.floor((35 / 100) * data.totalHospitalBeds) - severeCasesByTime;
+      expectedSevereCases = Math.trunc(severeInfected * (2 ** ((30 * data.timeToElapse) / 3)));
+      severeCasesByTime = Math.trunc((15 / 100) * expectedSevereCases);
+      severeHospitalBed = Math.trunc((35 / 100) * data.totalHospitalBeds) - severeCasesByTime;
       break;
     default:
       currentInfected = 0;
