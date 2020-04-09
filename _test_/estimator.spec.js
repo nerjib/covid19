@@ -26,13 +26,19 @@ describe('Challenge 1', () => {
         currentlyInfected: 6740,  
         infectionsByRequestedTime: 6901760,
         severeCasesByRequestedTime: 1035264,
-        hospitalBedsByRequestedTime: -552050
+        hospitalBedsByRequestedTime: -552049,
+        casesForICUByRequestedTime: 345088,
+        casesForVentilatorsByRequestedTime: 138035,
+        dollarsInFlight: 735037440.00
       },
       severeImpact: {
         currentlyInfected: 33700,
         infectionsByRequestedTime: 34508800,
         severeCasesByRequestedTime: 5176320,
-        hospitalBedsByRequestedTime: -4693106         
+        hospitalBedsByRequestedTime: -4693105,
+        casesForICUByRequestedTime: 1725440,
+        casesForVentilatorsByRequestedTime: 690176,
+        dollarsInFlight: 3675187200.00         
       }
     };
 
@@ -63,14 +69,20 @@ describe('Challenge 1', () => {
         //  infectionsByRequestedTime: 215680,
         infectionsByRequestedTime: 107840,
         severeCasesByRequestedTime: 16176,
-        hospitalBedsByRequestedTime: 467038
+        hospitalBedsByRequestedTime: 467039,
+        casesForICUByRequestedTime: 5392,
+        casesForVentilatorsByRequestedTime: 2156,
+        dollarsInFlight: 5359648.00
       },
       severeImpact: {
         currentlyInfected: 33700,
         // infectionsByRequestedTime: 842500
         infectionsByRequestedTime: 539200,
         severeCasesByRequestedTime: 80880,
-        hospitalBedsByRequestedTime: 402334
+        hospitalBedsByRequestedTime: 402335,
+        casesForICUByRequestedTime: 26960,
+        casesForVentilatorsByRequestedTime: 10784,
+        dollarsInFlight: 26798240.00
            
       }
     };
@@ -101,13 +113,19 @@ describe('Challenge 1', () => {
         currentlyInfected: 6740,
         infectionsByRequestedTime: 6901760,
         severeCasesByRequestedTime: 1035264,
-        hospitalBedsByRequestedTime: 11042816
+        hospitalBedsByRequestedTime: 11042816,
+        casesForICUByRequestedTime: 345088,
+        casesForVentilatorsByRequestedTime: 138035,
+        dollarsInFlight: 735037440.00
       },
       severeImpact: {
         currentlyInfected: 33700,
         infectionsByRequestedTime: 34508800,
         severeCasesByRequestedTime: 5176320,
-        hospitalBedsByRequestedTime: 6901760         
+        hospitalBedsByRequestedTime: 6901760,
+        casesForICUByRequestedTime: 1725440,
+        casesForVentilatorsByRequestedTime: 690176,
+        dollarsInFlight: 3675187200.00         
       }
     };
     
