@@ -92,7 +92,7 @@ describe('Challenge 1', () => {
       },
       severeImpact: {
         currentlyInfected: 33700,
-        infectionsByRequestedTime: 21739182          
+        infectionsByRequestedTime: 2173918          
       }
     };
     
