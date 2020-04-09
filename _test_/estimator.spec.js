@@ -14,7 +14,7 @@ describe('Challenge 1', () => {
         avgDailyIncomePopulation: 0.71
       },
       periodType: 'days',
-      timeToElapse: 58,
+      timeToElapse: 30,
       reportedCases: 674,
       population: 66622705,
       totalHospitalBeds: 1380614

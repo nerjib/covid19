@@ -19,9 +19,9 @@ const covid19ImpactEstimator = (data) => {
       break;
     case 'months':
       currentInfected = data.reportedCases * 10;
-      expectedCases = (currentInfected * Math.round(2 ** ((7 * 4 * data.timeToElapse) / 3)));
+      expectedCases = (currentInfected * (2 ** Math.round((7 * 4 * data.timeToElapse) / 3)));
       severeInfected = data.reportedCases * 50;
-      expectedSevereCases = (severeInfected * Math.round(2 ** ((7 * 4 * data.timeToElapse) / 3)));
+      expectedSevereCases = (severeInfected * (2 ** Math.round((7 * 4 * data.timeToElapse) / 3)));
       break;
     default:
       currentInfected = 0;
