@@ -25,7 +25,7 @@ const covid19ImpactEstimator = (data) => {
       dollarloss = expectedCases * data.region.avgDailyIncomeInUSD
       * data.region.avgDailyIncomePopulation * data.timeToElapse;
       severeInfected = data.reportedCases * 50;
-      expectedSevereCases = (severeInfected * (2 ** Math.trunc(data.timeToElapse / 3)));
+      expectedSevereCases = (expectedCases * (2 ** Math.trunc(data.timeToElapse / 3)));
       severeCasesByTime = Math.trunc((15 / 100) * expectedSevereCases);
       severeHospitalBed = Math.ceil((35 / 100) * data.totalHospitalBeds) - severeCasesByTime;
       severeICURequire = Math.trunc((5 / 100) * expectedSevereCases);
@@ -40,7 +40,7 @@ const covid19ImpactEstimator = (data) => {
       hospitalBedByTime = Math.ceil((35 / 100) * data.totalHospitalBeds) - severeCaseEstimate;
       icuRequire = Math.trunc((5 / 100) * severeCaseEstimate);
       ventRequire = Math.trunc((2 / 100) * severeCaseEstimate);
-      dollarloss = expectedCases * data.region.avgDailyIncomeInUSD
+      dollarloss = severeCaseEstimate * data.region.avgDailyIncomeInUSD
       * data.region.avgDailyIncomePopulation * (data.timeToElapse * 7);
       severeInfected = data.reportedCases * 50;
       expectedSevereCases = (severeInfected * (2 ** Math.trunc((7 * data.timeToElapse) / 3)));
@@ -48,7 +48,7 @@ const covid19ImpactEstimator = (data) => {
       severeHospitalBed = Math.ceil((35 / 100) * data.totalHospitalBeds) - severeCasesByTime;
       severeICURequire = Math.trunc((5 / 100) * severeCasesByTime);
       severeVentRequire = Math.trunc((2 / 100) * severeCasesByTime);
-      severeDollarloss = expectedSevereCases * data.region.avgDailyIncomeInUSD
+      severeDollarloss = severeCasesByTime * data.region.avgDailyIncomeInUSD
       * data.region.avgDailyIncomePopulation * (data.timeToElapse * 7);
       break;
     case 'months':
