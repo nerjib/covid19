@@ -88,7 +88,7 @@ describe('Challenge 1', () => {
       data: input,
       impact: {
         currentlyInfected: 6740,
-        infectionsByRequestedTime: 4347836
+        infectionsByRequestedTime: 434783
       },
       severeImpact: {
         currentlyInfected: 33700,
