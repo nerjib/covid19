@@ -14,6 +14,8 @@ const covid19ImpactEstimator = (data) => {
   let severeVentRequire;
   let dollarloss;
   let severeDollarloss;
+
+
   switch (data.periodType) {
     case 'days':
       currentInfected = data.reportedCases * 10;
@@ -73,7 +75,6 @@ const covid19ImpactEstimator = (data) => {
       currentInfected = 0;
 //      expectedCases = 0;
   }
-
   return {
     data,
     impact: {
